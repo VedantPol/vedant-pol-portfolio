@@ -24,3 +24,12 @@ npm run build
    - Output directory: `dist`
 
 The resume file is available at `/Vedant-Pol-Resume.pdf`.
+
+## Cloudflare DNS
+
+After Vercel creates the project, add your custom domain in Vercel and point Cloudflare DNS to Vercel:
+
+- Apex domain: `A` record to `76.76.21.21`
+- `www` subdomain: `CNAME` record to `cname.vercel-dns.com`
+
+Keep Cloudflare proxy off until Vercel verifies the domain.
