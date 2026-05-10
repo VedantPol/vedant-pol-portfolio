@@ -522,7 +522,7 @@ p {
   gap: 14px;
 }
 
-.project-card a,
+.project-card-content,
 .tool-card,
 .thought-card a,
 .education-card,
@@ -536,7 +536,7 @@ p {
   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.22);
 }
 
-.project-card a {
+.project-card-content {
   position: relative;
   display: flex;
   min-height: 442px;
@@ -548,12 +548,12 @@ p {
     background 260ms ease;
 }
 
-.project-card a:hover {
+.project-card-content:hover {
   transform: translateY(-8px);
   background: rgba(106, 107, 110, 0.18);
 }
 
-.project-card a::after {
+.project-card-content::after {
   position: absolute;
   right: -80px;
   bottom: -90px;
@@ -628,6 +628,29 @@ p {
   background: rgba(197, 255, 65, 0.12);
   font-size: 12px;
   font-weight: 850;
+}
+
+.project-links {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid rgba(197, 255, 65, 0.38);
+  border-radius: 999px;
+  color: #151312;
+  background: var(--green);
+  font-size: 12px;
+  font-weight: 900;
 }
 
 .kaggle-section {
@@ -1234,7 +1257,7 @@ footer a {
     font-size: clamp(48px, 17vw, 78px);
   }
 
-  .project-card a {
+  .project-card-content {
     min-height: 400px;
   }
 
@@ -1243,7 +1266,7 @@ footer a {
   }
 
   .timeline-item,
-  .project-card a,
+  .project-card-content,
   .tool-card,
   .thought-card a,
   .education-card,

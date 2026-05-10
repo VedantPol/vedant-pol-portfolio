@@ -52,11 +52,12 @@ const stats = [
 const projects = [
   {
     title: "Enterprise RAG Knowledge Assistant",
-    eyebrow: "Search + Grounded Answers",
+    eyebrow: "Live RAG App",
     copy:
-      "Built a source-aware assistant for policy and technical document search using PDF parsing, chunking, embeddings, vector indexing, metadata filtering, reranking, and citation-grounded answer generation.",
-    stack: ["Python", "LangChain", "Pinecone", "FastAPI", "Docker"],
-    href: profile.github,
+      "Built and deployed a source-aware assistant for policy and technical document search using PDF parsing, chunking, embeddings, temporary upload indexing, reranking, Docker, Cloudflare Tunnel, and citation-grounded answer generation.",
+    stack: ["Python", "LangChain", "FastAPI", "Docker", "Cloudflare"],
+    href: "https://enterprise_rag.vedant-home-server.in/",
+    repoHref: "https://github.com/VedantPol/enterprise-rag-knowledge-assistant",
     icon: DatabaseZap,
   },
   {
@@ -476,7 +477,7 @@ function App() {
                 const Icon = project.icon;
                 return (
                   <Reveal key={project.title} className="project-card" delay={index * 0.06}>
-                    <a href={project.href} target="_blank" rel="noreferrer">
+                    <div className="project-card-content">
                       <div className="card-topline">
                         <span>{project.eyebrow}</span>
                         <ArrowUpRight size={20} />
@@ -491,7 +492,17 @@ function App() {
                           <span key={item}>{item}</span>
                         ))}
                       </div>
-                    </a>
+                      <div className="project-links">
+                        <a href={project.href} target="_blank" rel="noreferrer">
+                          <ArrowUpRight size={16} /> Live
+                        </a>
+                        {(project.repoHref || project.href) && (
+                          <a href={project.repoHref || project.href} target="_blank" rel="noreferrer">
+                            <Github size={16} /> GitHub
+                          </a>
+                        )}
+                      </div>
+                    </div>
                   </Reveal>
                 );
               })}
