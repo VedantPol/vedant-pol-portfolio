@@ -40,7 +40,16 @@ const profile = {
     "Computer Science engineer building reliable GenAI, RAG, LLM evaluation, automation, and cloud-native systems. I turn messy AI workflows into measurable, source-grounded products.",
 };
 
-const navItems = ["Home", "Patent", "Projects", "Kaggle", "Experience", "Tools", "Thoughts", "Contact"];
+const navItems = [
+  ["Home", "home"],
+  ["Experience", "experience"],
+  ["Patent", "patent"],
+  ["Projects", "projects"],
+  ["Skills", "skills"],
+  ["Certifications", "certifications"],
+  ["Kaggle", "kaggle"],
+  ["Contact", "contact"],
+];
 
 const stats = [
   ["2+", "YEARS OF", "EXPERIENCE"],
@@ -377,9 +386,9 @@ function App() {
             Vedant Pol
           </a>
           <nav aria-label="Primary navigation">
-            {navItems.map((item) => (
-              <a key={item} href={`#${item.toLowerCase()}`}>
-                {item}
+            {navItems.map(([label, href]) => (
+              <a key={href} href={`#${href}`}>
+                {label}
               </a>
             ))}
           </nav>
@@ -471,6 +480,30 @@ function App() {
             </Reveal>
           </section>
 
+          <section id="experience" className="section experience-section">
+            <SectionTitle kicker="2+ Years Of">Experience</SectionTitle>
+            <div className="timeline">
+              {experience.map((item, index) => (
+                <Reveal key={item.company} className="timeline-item" delay={index * 0.08}>
+                  <div className="timeline-meta">
+                    <BriefcaseBusiness size={22} />
+                    <span>{item.period}</span>
+                    <span>{item.location}</span>
+                  </div>
+                  <div className="timeline-body">
+                    <h3>{item.company}</h3>
+                    <p>{item.title}</p>
+                    <ul>
+                      {item.points.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
           <section id="patent" className="section patent-section">
             <SectionTitle kicker="Featured">Patent</SectionTitle>
             <Reveal className="patent-spotlight">
@@ -548,6 +581,54 @@ function App() {
             </div>
           </section>
 
+          <section id="skills" className="section">
+            <SectionTitle kicker="Core">Skills</SectionTitle>
+            <div className="tool-grid">
+              {tools.map(([name, copy, Icon], index) => (
+                <Reveal key={name} className="tool-card" delay={index * 0.04}>
+                  <Icon size={28} />
+                  <h3>{name}</h3>
+                  <p>{copy}</p>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="certifications" className="section education-band">
+            <Reveal className="education-card certification-spotlight">
+              <div>
+                <span className="section-kicker">AWS Certified</span>
+                <h2>Machine Learning Specialist</h2>
+                <p>
+                  AWS Certified Machine Learning - Specialty and AWS Certified Cloud Practitioner,
+                  backed by applied ML, GenAI/RAG evaluation, automation, and cloud-native engineering work.
+                </p>
+              </div>
+              <Award size={58} />
+            </Reveal>
+            <div className="cert-grid">
+              {certifications.map((cert, index) => (
+                <Reveal key={cert.label} className="cert-card" delay={index * 0.05}>
+                  <a href={cert.href} target="_blank" rel="noreferrer">
+                    <Award size={20} />
+                    <span>{cert.label}</span>
+                    <ArrowUpRight size={18} />
+                  </a>
+                </Reveal>
+              ))}
+            </div>
+            <Reveal className="degree-card">
+              <Medal size={24} />
+              <div>
+                <span>B.Tech, Computer Science</span>
+                <p>
+                  Mumbai University, 2020 - 2024. CGPA 9.08/10 with coursework in DSA, databases,
+                  operating systems, computer networks, ML, AI, software engineering, and cloud computing.
+                </p>
+              </div>
+            </Reveal>
+          </section>
+
           <section id="kaggle" className="section kaggle-section">
             <SectionTitle kicker="ML">Kaggle</SectionTitle>
             <div className="kaggle-lead">
@@ -592,76 +673,19 @@ function App() {
             </div>
           </section>
 
-          <section id="experience" className="section experience-section">
-            <SectionTitle kicker="2+ Years Of">Experience</SectionTitle>
-            <div className="timeline">
-              {experience.map((item, index) => (
-                <Reveal key={item.company} className="timeline-item" delay={index * 0.08}>
-                  <div className="timeline-meta">
-                    <BriefcaseBusiness size={22} />
-                    <span>{item.period}</span>
-                    <span>{item.location}</span>
-                  </div>
-                  <div className="timeline-body">
-                    <h3>{item.company}</h3>
-                    <p>{item.title}</p>
-                    <ul>
-                      {item.points.map((point) => (
-                        <li key={point}>{point}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </section>
-
-          <section id="tools" className="section">
-            <SectionTitle kicker="Premium">Tools</SectionTitle>
-            <div className="tool-grid">
-              {tools.map(([name, copy, Icon], index) => (
-                <Reveal key={name} className="tool-card" delay={index * 0.04}>
-                  <Icon size={28} />
-                  <h3>{name}</h3>
-                  <p>{copy}</p>
-                </Reveal>
-              ))}
-            </div>
-          </section>
-
-          <section className="section education-band">
-            <Reveal className="education-card certification-spotlight">
-              <div>
-                <span className="section-kicker">AWS Certified</span>
-                <h2>Machine Learning Specialist</h2>
-                <p>
-                  AWS Certified Machine Learning - Specialty and AWS Certified Cloud Practitioner,
-                  backed by applied ML, GenAI/RAG evaluation, automation, and cloud-native engineering work.
-                </p>
-              </div>
-              <Award size={58} />
-            </Reveal>
-            <div className="cert-grid">
-              {certifications.map((cert, index) => (
-                <Reveal key={cert.label} className="cert-card" delay={index * 0.05}>
-                  <a href={cert.href} target="_blank" rel="noreferrer">
-                    <Award size={20} />
-                    <span>{cert.label}</span>
+          <section id="evidence" className="section evidence-section">
+            <SectionTitle kicker="Public">Evidence</SectionTitle>
+            <div className="link-grid">
+              {linkCards.map(([label, href], index) => (
+                <Reveal key={label} className="evidence-link" delay={index * 0.04}>
+                  <a href={href} target="_blank" rel="noreferrer">
+                    <PackageCheck size={20} />
+                    {label}
                     <ArrowUpRight size={18} />
                   </a>
                 </Reveal>
               ))}
             </div>
-            <Reveal className="degree-card">
-              <Medal size={24} />
-              <div>
-                <span>B.Tech, Computer Science</span>
-                <p>
-                  Mumbai University, 2020 - 2024. CGPA 9.08/10 with coursework in DSA, databases,
-                  operating systems, computer networks, ML, AI, software engineering, and cloud computing.
-                </p>
-              </div>
-            </Reveal>
           </section>
 
           <section id="thoughts" className="section">
@@ -676,21 +700,6 @@ function App() {
                       <p>{note.copy}</p>
                     </div>
                     <ArrowUpRight size={24} />
-                  </a>
-                </Reveal>
-              ))}
-            </div>
-          </section>
-
-          <section className="section evidence-section">
-            <SectionTitle kicker="Public">Evidence</SectionTitle>
-            <div className="link-grid">
-              {linkCards.map(([label, href], index) => (
-                <Reveal key={label} className="evidence-link" delay={index * 0.04}>
-                  <a href={href} target="_blank" rel="noreferrer">
-                    <PackageCheck size={20} />
-                    {label}
-                    <ArrowUpRight size={18} />
                   </a>
                 </Reveal>
               ))}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Vedant Pol logo">
+  <rect width="64" height="64" rx="14" fill="#151312" />
+  <path d="M12 16h10l10 29 10-29h10L37 52H27L12 16Z" fill="#c5ff41" />
+  <path d="M39 16h7c6 0 10 4 10 10s-4 10-10 10h-6v-8h5c2 0 3-1 3-2s-1-2-3-2h-6v-8Z" fill="#f46c38" />
+  <circle cx="48" cy="48" r="4" fill="#b6b4bd" />
+</svg>
