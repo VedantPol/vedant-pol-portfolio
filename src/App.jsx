@@ -40,7 +40,7 @@ const profile = {
     "Computer Science engineer building reliable GenAI, RAG, LLM evaluation, automation, and cloud-native systems. I turn messy AI workflows into measurable, source-grounded products.",
 };
 
-const navItems = ["Home", "Projects", "Kaggle", "Experience", "Tools", "Thoughts", "Contact"];
+const navItems = ["Home", "Patent", "Projects", "Kaggle", "Experience", "Tools", "Thoughts", "Contact"];
 
 const stats = [
   ["2+", "YEARS OF", "EXPERIENCE"],
@@ -79,16 +79,16 @@ const projects = [
     href: profile.github,
     icon: TestTube2,
   },
-  {
-    title: "ML-Based Printer Fault Diagnosis",
-    eyebrow: "German Patent",
-    copy:
-      "Developed an audio-based supervised ML system using signal processing, feature extraction, classification models, CNNs, hardware sensor data, and Raspberry Pi to detect printer faults.",
-    stack: ["Python", "CNNs", "Signal Processing", "Raspberry Pi"],
-    href: "https://drive.google.com/file/d/12Nkm-uN7GnuPpnKP-rH8cr7VUtiqqluu/view",
-    icon: Award,
-  },
 ];
+
+const patent = {
+  title: "ML-Based Printer Fault Diagnosis",
+  eyebrow: "German Patent",
+  copy:
+    "Developed an audio-based supervised ML system using signal processing, feature extraction, classification models, CNNs, hardware sensor data, and Raspberry Pi to detect printer faults.",
+  stack: ["Audio ML", "CNNs", "Signal Processing", "Hardware Sensors", "Raspberry Pi"],
+  href: "https://drive.google.com/file/d/12Nkm-uN7GnuPpnKP-rH8cr7VUtiqqluu/view",
+};
 
 const experience = [
   {
@@ -468,6 +468,44 @@ function App() {
             </Reveal>
             <Reveal className="intro-stack" delay={0.08}>
               PYTHON, RAG, LANGCHAIN, PINECONE, PYTORCH, DOCKER, KUBERNETES
+            </Reveal>
+          </section>
+
+          <section id="patent" className="section patent-section">
+            <SectionTitle kicker="Featured">Patent</SectionTitle>
+            <Reveal className="patent-spotlight">
+              <div className="patent-copy">
+                <div className="patent-badge">
+                  <Award size={22} />
+                  {patent.eyebrow}
+                </div>
+                <h3>{patent.title}</h3>
+                <p>{patent.copy}</p>
+                <div className="stack-list patent-stack">
+                  {patent.stack.map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
+                </div>
+                <div className="project-links patent-links">
+                  <a href={patent.href} target="_blank" rel="noreferrer">
+                    <ArrowUpRight size={16} /> View Patent
+                  </a>
+                </div>
+              </div>
+              <div className="patent-proof" aria-label="Patent technical highlights">
+                <div>
+                  <span>01</span>
+                  <strong>Audio Signal Diagnosis</strong>
+                </div>
+                <div>
+                  <span>02</span>
+                  <strong>Supervised ML Pipeline</strong>
+                </div>
+                <div>
+                  <span>03</span>
+                  <strong>Hardware Sensor Prototype</strong>
+                </div>
+              </div>
             </Reveal>
           </section>
 
