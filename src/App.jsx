@@ -62,11 +62,12 @@ const projects = [
   },
   {
     title: "Multi-Agent Knowledge Management System",
-    eyebrow: "Agentic AI Workflow",
+    eyebrow: "Live Agentic AI App",
     copy:
-      "Developed LangGraph Retriever, Planner, Critic, and Summarizer agents with prompt-injection guardrails, unsupported-claim checks, citation validation, hallucination detection, and LLM-as-Judge evaluation.",
+      "Deployed a LangGraph and AutoGen knowledge-management system with Retriever, Planner, Critic, Summarizer, prompt-injection guardrails, unsupported-claim checks, citation validation, hallucination detection, and LLM-as-Judge evaluation.",
     stack: ["LangGraph", "AutoGen", "FastAPI", "Docker"],
-    href: profile.github,
+    href: "https://multi_agent_kms.vedant-home-server.in/",
+    repoHref: "https://github.com/VedantPol/multi-agent-knowledge-manager",
     icon: BrainCircuit,
   },
   {
