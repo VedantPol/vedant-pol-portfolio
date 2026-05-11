@@ -16,7 +16,6 @@ import {
   PackageCheck,
   ShieldCheck,
   Sparkles,
-  TestTube2,
 } from "lucide-react";
 import {
   motion,
@@ -80,13 +79,14 @@ const projects = [
     icon: BrainCircuit,
   },
   {
-    title: "LLM Evaluation & Regression Framework",
-    eyebrow: "Quality + Safety Automation",
+    title: "RetailPulse AI: Forecasting & Recommendation Platform",
+    eyebrow: "Live ML + MLOps App",
     copy:
-      "Automated checks for factuality, refusal behavior, hallucination rate, prompt-injection resistance, latency, business-rule compliance, citation presence, retrieval quality, and missing-context handling.",
-    stack: ["Python", "Playwright", "Pytest", "Allure", "MLflow"],
-    href: profile.github,
-    icon: TestTube2,
+      "Built and deployed a Dockerized retail analytics platform for demand forecasting, stockout risk scoring, anomaly detection, product recommendations, feature-importance explainability, and AI-assisted business insights.",
+    stack: ["Python", "FastAPI", "Streamlit", "LightGBM", "Docker"],
+    href: "https://retail_pulse.vedant-home-server.in/",
+    repoHref: "https://github.com/VedantPol/retailpulse-ai",
+    icon: PackageCheck,
   },
 ];
 
