@@ -28,7 +28,7 @@ import { useEffect } from "react";
 
 const profile = {
   name: "Vedant Pol",
-  role: "AI SYSTEMS ENGINEER",
+  role: "DATA & GENAI ENGINEER",
   email: "polvedant7@gmail.com",
   phone: "+91 8779930826",
   location: "Mumbai, India",
@@ -36,7 +36,7 @@ const profile = {
   linkedin: "https://www.linkedin.com/in/vedant-pol-30987b20a",
   resume: "/Vedant-Pol-Resume.pdf",
   summary:
-    "Computer Science engineer building reliable GenAI, RAG, LLM evaluation, automation, and cloud-native systems. I turn messy AI workflows into measurable, source-grounded products.",
+    "Computer Science engineer building banking data automation, GenAI QA tools, ML workflows, and cloud-native systems. I turn messy documents and transaction flows into measurable AI-ready outputs.",
 };
 
 const navItems = [
@@ -52,8 +52,8 @@ const navItems = [
 
 const stats = [
   ["2+", "YEARS OF", "EXPERIENCE"],
-  ["284K+", "TRANSACTIONS", "ANALYZED"],
-  ["500+", "DOCS", "INDEXED"],
+  ["UPI/CMS", "BANKING", "WORKFLOWS"],
+  ["FSD/JIRA", "TO TEST", "CASES"],
   ["81/2422", "KAGGLE", "BEST RANK"],
 ];
 
@@ -113,17 +113,17 @@ const experience = [
     ],
   },
   {
-    company: "IDFC First Bank",
-    title: "Software Development Engineer in Test, AI Systems & Automation",
+    company: "IDFC FIRST Bank",
+    title: "Software Development Engineer in Test, Data Automation & GenAI QA",
     period: "2024 - Present",
     location: "Mumbai",
     points: [
-      "Built and evaluated a GenAI fraud-risk workflow across 284K+ transaction records, improving fraud-case triage recall by 25%.",
-      "Developed a RAG compliance and policy search system with LangChain, Pinecone, embeddings, metadata filtering, and citation-grounded retrieval.",
-      "Indexed 500+ regulatory and operational documents, reducing manual policy lookup time by 60%.",
-      "Improved grounded-answer accuracy from 78% to 91% through RAG benchmarking across chunking, embedding, top-k, reranking, and prompt settings.",
-      "Built LLM/RAG evaluation datasets tracking Recall@K, Precision@K, MRR, faithfulness, hallucination rate, latency, and cost per query.",
-      "Automated factuality, refusal, hallucination, prompt-injection, and consistency checks with Python, Playwright, GoCD, and Allure.",
+      "Built data-driven automation frameworks for payments, escrow, DigiXCRO/CMS, and UPI banking workflows.",
+      "Validated transactions through expected-vs-actual comparison, SQL/database checks, log analysis, and reliable QA reporting.",
+      "Developed a GenAI QA Test Design Generator with Python, FastAPI, Streamlit, SQLite, and OpenAI-compatible LLM APIs.",
+      "Converted FSDs, architecture docs, Jira issues, and Confluence pages into structured test cases and traceability matrices.",
+      "Generated assumptions, coverage gaps, and downloadable JSON/DOCX/XLSX outputs through prompt engineering and document parsing.",
+      "Built DS/AI depth in feature engineering, model evaluation, AWS, and MLOps for fintech and document-intelligence roles.",
     ],
   },
   {
@@ -349,12 +349,12 @@ function HeroVisual() {
           </div>
         </div>
         <div className="metric-ring">
-          <strong>91%</strong>
-          <small>grounded accuracy</small>
+          <strong>QA</strong>
+          <small>GenAI design</small>
         </div>
         <div className="terminal-lines">
-          <p>rag.eval.run()</p>
-          <p>citations: verified</p>
+          <p>docs.to_tests()</p>
+          <p>json: structured</p>
           <p>kaggle.practice: active</p>
         </div>
       </div>
