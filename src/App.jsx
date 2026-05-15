@@ -28,7 +28,7 @@ import { useEffect } from "react";
 
 const profile = {
   name: "Vedant Pol",
-  role: "DATA & GENAI ENGINEER",
+  role: "ML, GENAI & DATA SCIENCE ENGINEER",
   email: "polvedant7@gmail.com",
   phone: "+91 8779930826",
   location: "Mumbai, India",
@@ -36,7 +36,7 @@ const profile = {
   linkedin: "https://www.linkedin.com/in/vedant-pol-30987b20a",
   resume: "/Vedant-Pol-Resume.pdf",
   summary:
-    "Computer Science engineer building banking data automation, GenAI QA tools, ML workflows, and cloud-native systems. I turn messy documents and transaction flows into measurable AI-ready outputs.",
+    "Computer Science engineer building ML-ready banking datasets, GenAI/RAG systems, forecasting workflows, analytics products, and cloud-native AI applications. I turn messy documents and transaction flows into measurable data science outputs.",
 };
 
 const navItems = [
@@ -53,7 +53,7 @@ const navItems = [
 const stats = [
   ["2+", "YEARS OF", "EXPERIENCE"],
   ["UPI/CMS", "BANKING", "WORKFLOWS"],
-  ["FSD/JIRA", "TO TEST", "CASES"],
+  ["RAG/LLM", "AI", "SYSTEMS"],
   ["81/2422", "KAGGLE", "BEST RANK"],
 ];
 
@@ -114,16 +114,16 @@ const experience = [
   },
   {
     company: "IDFC FIRST Bank",
-    title: "Software Development Engineer in Test, Data Automation & GenAI QA",
+    title: "ML, GenAI & Data Science Engineer - Fintech Analytics",
     period: "2024 - Present",
     location: "Mumbai",
     points: [
-      "Built data-driven automation frameworks for payments, escrow, DigiXCRO/CMS, and UPI banking workflows.",
-      "Validated transactions through expected-vs-actual comparison, SQL/database checks, log analysis, and reliable QA reporting.",
-      "Developed a GenAI QA Test Design Generator with Python, FastAPI, Streamlit, SQLite, and OpenAI-compatible LLM APIs.",
-      "Converted FSDs, architecture docs, Jira issues, and Confluence pages into structured test cases and traceability matrices.",
-      "Generated assumptions, coverage gaps, and downloadable JSON/DOCX/XLSX outputs through prompt engineering and document parsing.",
-      "Built DS/AI depth in feature engineering, model evaluation, AWS, and MLOps for fintech and document-intelligence roles.",
+      "Built ML-ready datasets and analytics workflows for payments, escrow, DigiXCRO/CMS, and UPI banking systems.",
+      "Used Python, SQL, log mining, feature extraction, and cohort analysis to transform transaction flows into actionable fintech insights.",
+      "Developed GenAI document-intelligence systems with Python, FastAPI, Streamlit, SQLite, embeddings, and OpenAI-compatible LLM APIs.",
+      "Converted product, architecture, and business documents into semantic knowledge bases, structured insights, and entity extraction outputs.",
+      "Generated downloadable JSON/DOCX/XLSX analytics outputs through prompt engineering, document parsing, and structured LLM responses.",
+      "Built DS/AI depth in feature engineering, model evaluation, AWS, and MLOps for fintech AI and document-intelligence systems.",
     ],
   },
   {
@@ -226,7 +226,7 @@ const tools = [
   ["Pinecone / FAISS / Milvus", "Semantic search, embeddings, hybrid retrieval, metadata filters, and vector indexes.", DatabaseZap],
   ["PyTorch + Hugging Face", "Model evaluation, feature extraction, classification, transformers, and ML experiments.", Sparkles],
   ["Docker + Kubernetes", "Cloud-ready packaging, deployment automation, and reproducible engineering environments.", Cloud],
-  ["Playwright + Pytest + Allure", "Regression-ready automation for UI, APIs, LLM behavior, and reporting.", ShieldCheck],
+  ["MLflow + LLM Evaluation", "Experiment tracking, model metrics, groundedness scoring, guardrails, and AI system monitoring.", ShieldCheck],
 ];
 
 const notes = [
@@ -237,10 +237,10 @@ const notes = [
     date: "AI Evaluation",
   },
   {
-    title: "LLM Safety Belongs In The Test Suite",
+    title: "LLM Safety Belongs In The Evaluation Loop",
     copy:
-      "Prompt-injection checks, missing-context questions, refusal behavior, unsupported-claim detection, and hallucination tracking should be regression tests, not a last-minute review.",
-    date: "Automation",
+      "Prompt-injection checks, missing-context questions, refusal behavior, unsupported-claim detection, and hallucination tracking should be measurable evaluation signals, not a last-minute review.",
+    date: "AI Evaluation",
   },
   {
     title: "Open Source Teaches Operational Taste",
@@ -338,7 +338,7 @@ function HeroVisual() {
       </div>
       <div className="portrait-card">
         <div className="portrait-top">
-          <span>AI QUALITY SYSTEM</span>
+          <span>AI INTELLIGENCE SYSTEM</span>
           <BrainCircuit size={24} />
         </div>
         <div className="profile-photo-wrap">
@@ -349,12 +349,12 @@ function HeroVisual() {
           </div>
         </div>
         <div className="metric-ring">
-          <strong>QA</strong>
-          <small>GenAI design</small>
+          <strong>ML</strong>
+          <small>GenAI + DS</small>
         </div>
         <div className="terminal-lines">
-          <p>docs.to_tests()</p>
-          <p>json: structured</p>
+          <p>docs.to_vectors()</p>
+          <p>features: engineered</p>
           <p>kaggle.practice: active</p>
         </div>
       </div>
@@ -710,10 +710,10 @@ function App() {
             <SectionTitle kicker="Let's Work">Together</SectionTitle>
             <div className="contact-layout">
               <Reveal className="contact-copy">
-                <h3>Have a GenAI, RAG, ML evaluation, automation, or cloud-native engineering role?</h3>
+                <h3>Have a GenAI, RAG, ML evaluation, data science, or cloud-native AI engineering role?</h3>
                 <p>
-                  I'm interested in teams that care about reliable AI systems, testable behavior,
-                  and production engineering discipline.
+                  I'm interested in teams that care about reliable AI systems, measurable model behavior,
+                  data-driven products, and production engineering discipline.
                 </p>
                 <div className="contact-lines">
                   <a href={`mailto:${profile.email}`}>
@@ -746,7 +746,7 @@ function App() {
                       <option>AI/ML Engineer</option>
                       <option>GenAI / RAG Engineer</option>
                       <option>LLM Evaluation Engineer</option>
-                      <option>MLOps / Automation Engineer</option>
+                      <option>MLOps / Data Engineering</option>
                     </select>
                   </label>
                   <label>
